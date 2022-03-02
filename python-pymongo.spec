@@ -15,31 +15,22 @@ Vendor: The MongoDB Python Team
 Url: http://github.com/mongodb/mongo-python-driver
 
 %description
-
 The PyMongo distribution contains tools for interacting with MongoDB
 database from Python.
 
 %prep
-cd ~/rpmbuild/SOURCES/
-tar -xzvf %{name}-%{version}.tar.gz
-mv mongo-python-driver-%{version} %{name}-%{version}
-rm %{name}-%{version}.tar.gz
-tar -czvf %{name}-%{version}.tar.gz %{name}-%{version}
-
-%setup
+%setup -n %{name}-%{version}
 
 %build
-env CFLAGS="$RPM_OPT_FLAGS" python3 setup.py build
+%py3_build
 
 %install
-python3 setup.py install --single-version-externally-managed -O1 --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
+%py3_install
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-%files -f INSTALLED_FILES
-
-%defattr(-,root,root)
+%files
+%license LICENSE
+%doc README.rst RELEASE.rst
+%{python3_sitearch}/*
 
 %changelog
 * Mon Feb 7 2022 Ryan McCann <ryan_mccann@student.uml.edu> and Robert Moeller <robert_moeller@student.uml.edu>
