@@ -19,11 +19,6 @@ The PyMongo distribution contains tools for interacting with MongoDB
 database from Python.
 
 %prep
-cd ~/rpmbuild/SOURCES
-tar -xzvf python-pymongo-4.0.1.tar.gz
-mv mongo-python-driver-4.0.1 python-pymongo-%{version}
-rm python-pymongo-4.0.1.tar.gz
-tar -czvf python-pymongo-4.0.1.tar.gz python-pymongo-%{version}
 %setup -n %{name}-%{version}
 
 %build
