@@ -43,5 +43,5 @@ Documentation with examples is available at http://packages.python.org/algopy/.
 %defattr(-,root,root)
 
 %changelog
-* Mon Mar 15 2022 Sage Lyon <sage_lyon@student.uml.edu> 0.5.7
+* Mon Mar 15 2022 Vibishan Wigneswaran <vibish11@gmail.com> 0.5.7
 - Initial algopy package
