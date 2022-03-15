@@ -35,5 +35,5 @@ The numdifftools library is a suite of tools written in _Python to solve automat
 %{python3_sitelib}/*
 
 %changelog
-* Mon Feb 28 2022 Sage Lyon <sage_lyon@student.uml.edu> 0.9.40
+* Mon Feb 28 2022 Sage Lyon <sageclyon@gmail.com> 0.9.40-1
 - Initial numdifftools package
